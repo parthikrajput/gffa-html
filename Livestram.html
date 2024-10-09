@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GFFA</title>
+    <link rel="stylesheet" href="./src/fonts/font.css">
+    <link href="./main.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="relative z-30">
+        <div class="h-navigition bg-green">
+            <div class="container">
+                <div
+                    class="h-navigition-wrapper *:text-body h-[50px]  flex flex-wrap justify-end items-center gap-[20px] xsm:gap-[30px] text-white">
+                    <a href="#">Presseinformation</a>
+                    <a href="#">Kontakt</a>
+                    <div class="language flex items-center gap-1.5">
+                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7 0.25C10.8555 0.25 14 3.39453 14 7.25C14 11.1328 10.8555 14.25 7 14.25C3.11719 14.25 0 11.1328 0 7.25C0 3.39453 3.11719 0.25 7 0.25ZM7 13.375C7.4375 13.375 8.09375 12.9922 8.66797 11.8164C8.94141 11.2695 9.1875 10.6133 9.32422 9.875H4.64844C4.78516 10.6133 5.03125 11.2695 5.30469 11.8164C5.87891 12.9922 6.53516 13.375 7 13.375ZM4.48438 9H9.48828C9.57031 8.45312 9.625 7.87891 9.625 7.25C9.625 6.64844 9.57031 6.07422 9.48828 5.5H4.48438C4.40234 6.07422 4.375 6.64844 4.375 7.25C4.375 7.87891 4.40234 8.45312 4.48438 9ZM9.32422 4.625C9.1875 3.88672 8.94141 3.25781 8.66797 2.71094C8.09375 1.53516 7.4375 1.125 7 1.125C6.53516 1.125 5.87891 1.53516 5.30469 2.71094C5.03125 3.25781 4.78516 3.88672 4.64844 4.625H9.32422ZM10.3633 5.5C10.4453 6.07422 10.5 6.64844 10.5 7.25C10.5 7.87891 10.4453 8.45312 10.3633 9H12.8516C13.0156 8.45312 13.125 7.87891 13.125 7.25C13.125 6.64844 13.0156 6.07422 12.8516 5.5H10.3633ZM8.94141 1.45312C9.51562 2.21875 9.98047 3.33984 10.2266 4.625H12.5234C11.8125 3.14844 10.5273 2 8.94141 1.45312ZM5.03125 1.45312C3.44531 2 2.16016 3.14844 1.44922 4.625H3.74609C3.99219 3.33984 4.45703 2.21875 5.03125 1.45312ZM0.875 7.25C0.875 7.87891 0.957031 8.45312 1.12109 9H3.60938C3.52734 8.45312 3.5 7.87891 3.5 7.25C3.5 6.64844 3.52734 6.07422 3.60938 5.5H1.12109C0.957031 6.07422 0.875 6.64844 0.875 7.25ZM12.5234 9.875H10.2266C9.98047 11.1875 9.51562 12.2812 8.94141 13.0742C10.5273 12.5273 11.8125 11.3789 12.5234 9.875ZM3.74609 9.875H1.44922C2.16016 11.3789 3.44531 12.5273 5.03125 13.0742C4.45703 12.2812 3.99219 11.1875 3.74609 9.875Z"
+                                fill="white" />
+                        </svg>
+                        <a href="#">English</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header bg-white py-5">
+            <div class="container">
+                <div class="h-wrapper flex items-center justify-between">
+                    <div class="hf-logo flex-none flex items-center gap-5">
+                        <div class="menu-icon lg:hidden">
+                            <svg xmlns="http: //www.w3.org/2000/svg" height="22" width="20" viewBox="0 0 448 512">
+                                <path
+                                    d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                                    fill="#1F8743"></path>
+                            </svg>
+                        </div>
+                        <div class="hf-logo w-[124px]">
+                            <img src="./src/img/bmel.png" alt="bmel">
+                        </div>
+
+                    </div>
+                    <nav
+                        class="fixed top-0 left-[-1000px] w-[300px] h-screen bg-green z-40 transition-all duration-1000 ease-in-out lg:w-auto lg:left-0 lg:relative lg:h-auto lg:bg-transparent">
+                        <ul
+                            class="flex lg:items-center gap-[30px] xl:gap-[50px] *:text-a lg:text-black-100 text-white lg:flex-row flex-col px-4 pt-20 lg:pl-0 lg:pt-0">
+                            <li>
+                                <a href="#">Start</a>
+                            </li>
+                            <li>
+                                <a href="#">Berliner Agrarministerkonferenz</a>
+                            </li>
+                            <li id="toggle-menu"
+                                class="menu-item group flex items-center lg:items-center flex-wrap justify-between lg:justify-normal gap-[16px] lg:gap-[7px] relative cursor-pointer">
+                                <a href="#">Programm</a>
+                                <svg width="13" height="7" viewBox="0 0 13 7" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path class="fill-white lg:fill-black-100"
+                                        d="M7.03125 6.53125C6.71875 6.84375 6.25 6.84375 5.96875 6.53125L0.96875 1.53125C0.65625 1.25 0.65625 0.78125 0.96875 0.5C1.25 0.1875 1.71875 0.1875 2 0.5L6.46875 4.96875L10.9688 0.46875C11.25 0.1875 11.7188 0.1875 12 0.46875C12.3125 0.78125 12.3125 1.25 12 1.53125L7.03125 6.53125Z" />
+                                </svg>
+                                <ul id="submenu"
+                                    class="sub-menu lg:absolute lg:w-[200px] w-full p-4 top-[100%] left-0 bg-white shadow-custom text-black-100 space-y-4 lg:opacity-0 lg:invisible lg:group-hover:opacity-100 lg:group-hover:visible lg:transition-all lg:duration-300 hidden lg:block">
+                                    <li><a href="#">home 1</a></li>
+                                    <li><a href="#">home 2</a></li>
+                                    <li><a href="#">home 3</a></li>
+                                    <li><a href="#">home 4</a></li>
+                                </ul>
+                            </li>
+
+                            <li id="toggle-menu"
+                                class="menu-item group flex items-center lg:items-center flex-wrap justify-between lg:justify-normal gap-[16px] lg:gap-[7px] relative cursor-pointer">
+                                <a href="#">
+                                    Service
+                                </a>
+                                <svg width="13" height="7" viewBox="0 0 13 7" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path class="fill-white lg:fill-black-100"
+                                        d="M7.03125 6.53125C6.71875 6.84375 6.25 6.84375 5.96875 6.53125L0.96875 1.53125C0.65625 1.25 0.65625 0.78125 0.96875 0.5C1.25 0.1875 1.71875 0.1875 2 0.5L6.46875 4.96875L10.9688 0.46875C11.25 0.1875 11.7188 0.1875 12 0.46875C12.3125 0.78125 12.3125 1.25 12 1.53125L7.03125 6.53125Z" />
+                                </svg>
+                                <ul id="submenu"
+                                    class="sub-menu lg:absolute lg:w-[200px] w-full p-4 top-[100%] left-0 bg-white shadow-custom text-black-100 space-y-4 lg:opacity-0 lg:invisible lg:group-hover:opacity-100 lg:group-hover:visible lg:transition-all lg:duration-300 hidden lg:block">
+                                    <li><a href="#">home 1</a></li>
+                                    <li><a href="#">home 2</a></li>
+                                    <li><a href="#">home 3</a></li>
+                                    <li><a href="#">home 4</a></li>
+                                </ul>
+                            </li>
+                            <li id="toggle-menu"
+                                class="menu-item group flex items-center lg:items-center flex-wrap justify-between lg:justify-normal gap-[16px] lg:gap-[7px] relative cursor-pointer">
+                                <a href="#">
+                                    Über uns
+                                </a>
+                                <svg width="13" height="7" viewBox="0 0 13 7" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path class="fill-white lg:fill-black-100"
+                                        d="M7.03125 6.53125C6.71875 6.84375 6.25 6.84375 5.96875 6.53125L0.96875 1.53125C0.65625 1.25 0.65625 0.78125 0.96875 0.5C1.25 0.1875 1.71875 0.1875 2 0.5L6.46875 4.96875L10.9688 0.46875C11.25 0.1875 11.7188 0.1875 12 0.46875C12.3125 0.78125 12.3125 1.25 12 1.53125L7.03125 6.53125Z" />
+                                </svg>
+                                <ul id="submenu"
+                                    class="sub-menu lg:absolute lg:w-[200px] w-full p-4 top-[100%] left-0 bg-white shadow-custom text-black-100 space-y-4 lg:opacity-0 lg:invisible lg:group-hover:opacity-100 lg:group-hover:visible lg:transition-all lg:duration-300 hidden lg:block">
+                                    <li><a href="#">home 1</a></li>
+                                    <li><a href="#">home 2</a></li>
+                                    <li><a href="#">home 3</a></li>
+                                    <li><a href="#">home 4</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="close-icon lg:hidden absolute top-5 right-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="22" width="20" viewBox="0 0 448 512">
+                                <path
+                                    d="M342.6 150.6a32 32 0 0 0-45.3-45.3L192 210.7 86.6 105.4a32 32 0 0 0-45.3 45.3L146.7 256 41.4 361.4a32 32 0 0 0 45.3 45.3L192 301.3l105.4 105.3a32 32 0 0 0 45.3-45.3L237.3 256l105.3-105.4z"
+                                    fill="#fff"></path>
+                            </svg>
+                        </div>
+                    </nav>
+                    <div class="hs-logo w-[100px] xsm:w-[126px] flex-none">
+                        <img src="./src/img/logo.png" alt="logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="sub-banner relative bg-green">
+            <div class="container">
+                <div class="break text-body text-white flex items-center gap-3 py-4">
+                    <a href="#">Start</a>
+                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M5.39844 4.60156C5.60938 4.83594 5.60938 5.1875 5.39844 5.39844L1.64844 9.14844C1.41406 9.38281 1.0625 9.38281 0.851562 9.14844C0.617188 8.9375 0.617188 8.58594 0.851562 8.375L4.20312 5.02344L0.851562 1.64844C0.617188 1.4375 0.617188 1.08594 0.851562 0.875C1.0625 0.640625 1.41406 0.640625 1.625 0.875L5.39844 4.60156Z"
+                            fill="white" />
+                    </svg>
+                    <a href="#"><span class="opacity-50 block">Live Streams</span></a>
+                </div>
+                <div class="sub-wrapper  flex items-end flex-wrap py-12 xlg:pt-16 xlg:pb-28 ">
+                    <div class="sub-text xlg:w-4/5 lg:w-3/4 xl:w-2/3 flex flex-col gap-4 relative z-10">
+                        <h1 class="text-h4 sm:text-h3 lg:text-h2 text-sand">Discover Live Streams</h1>
+                        <div class="text text-a sm:text-p text-sand">
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                        </div>
+                    </div>
+                    <div class="sub-img absolute right-[20px] bottom-10 md:right-[40px] max-w-[650px]">
+                        <img src="./src/img/vector-3.svg" alt="vector">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  -->
+        <section class="tab py-12 sm:py-16 md:py-20 lg:py-24">
+            <div class="container">
+                <div class="tab-wrapper">
+                    <div class="flex mb-8 flex-wrap gap-y-4">
+                        <div class="tab-link border-b border-gray-20 w-full sm:w-1/2 xlg:w-1/3 xl:w-1/4 text-gray-600 py-2 px-4 block focus:outline-none"
+                            onclick="openTab(event, 'tab1')" id="defaultTab">
+                            <div class="title text-center text-gray-100 flex flex-col gap-4 text-body">
+                                <p>BMEL</p>
+                                <h2 class="text-p sm:text-h6 md:text-h5 font-normal text-gray">Mittwoch,
+                                    17.01.2024</h2>
+                            </div>
+                        </div>
+                        <div class="tab-link border-b border-gray-20 w-full sm:w-1/2 xlg:w-1/3 xl:w-1/4 text-gray-600 py-2 px-4 block focus:outline-none"
+                            onclick="openTab(event, 'tab2')">
+                            <div class="title text-center text-gray-100 flex flex-col gap-4 text-body">
+                                <p>City Cube</p>
+                                <h2 class="text-p sm:text-h6 md:text-h5 font-normal text-gray">Donnerstag,
+                                    18.01.2024 </h2>
+                            </div>
+                        </div>
+                        <div class="tab-link border-b border-gray-20 w-full sm:w-1/2 xlg:w-1/3 xl:w-1/4 text-gray-600 py-2 px-4 block focus:outline-none"
+                            onclick="openTab(event, 'tab3')">
+                            <div class="title text-center text-gray-100 flex flex-col gap-4 text-body">
+                                <p>City Cube</p>
+                                <h2 class="text-p sm:text-h6 md:text-h5 font-normal text-gray">Freitag,
+                                    19.01.2024 </h2>
+                            </div>
+                        </div>
+                        <div class="tab-link border-b border-gray-20 w-full sm:w-1/2 xlg:w-1/3 xl:w-1/4 text-gray-600 py-2 px-4 block focus:outline-none"
+                            onclick="openTab(event, 'tab4')">
+                            <div class="title text-center text-gray-100 flex flex-col gap-4 text-body">
+                                <p>City Cube</p>
+                                <h2 class="text-p sm:text-h6 md:text-h5 font-normal text-gray"> Samstag,
+                                    20.01.2024</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div id="tab1" class="tab-content hidden">
+                        <div class="tab-contect space-y-6">
+                            <div class="tab-box">
+                                <div
+                                    class="tab-date-text grid xlg:grid-cols-2 gap-6 sm:gap-[30px] items-start py-7 md:py-[50px] border-b-2 border-gray-200 border-solid">
+                                    <div class="text flex flex-col gap-3 xlg:gap-5 col-span-1">
+                                        <div class="date text-p text-black-100">
+                                            <p>14:00 - 15:30 Uhr</p>
+                                        </div>
+                                        <h3 class="text-black-100 text-h5 sm:text-h4 lg:text-h3">
+                                            GFFA Eröffnung
+                                        </h3>
+                                        <div class="text">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                                eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                                                voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                                                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                                                amet.
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="pepole flex items-center *:w-[50px] *:h-[50px] *:rounded-[50%] *:ml-[-20px] ml-5 *:border-2 *:border-white *:border-solid">
+                                            <img src="./src/img/u-1.png" alt="user">
+                                            <img src="./src/img/u-2.png" alt="user">
+                                            <img src="./src/img/u-3.png" alt="user">
+                                            <img src="./src/img/u-4.png" alt="user">
+                                            <img src="./src/img/u-5.png" alt="user">
+                                            <img src="./src/img/u-6.png" alt="user">
+                                            <img src="./src/img/u-7.png" alt="user">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="video-section video col-span-1 text-center rounded-[20px] overflow-hidden leading-[0px]">
+                                        <div class="relative position-relative inline-block w-full h-full">
+                                            <video controls muted playsinline class="w-full h-full"
+                                                poster="./src/img/poster.png" height="400" width="600">
+                                                <source src="./src/video/trailer.mp4" type="video/mp4">
+                                            </video>
+                                            <span
+                                                class="absolute play-btn left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center cursor-pointer">
+                                                <div
+                                                    class="rounded-full flex items-center justify-center bg-gray-100 w-[70px] h-[70px]">
+                                                    <svg class="block" width="32" height="38" viewBox="0 0 32 38"
+                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M32 19L0 38L0 0L32 19Z" fill="white" />
+                                                    </svg>
+                                                </div>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="tab-box">
+                                <div
+                                    class="tab-date-text grid xlg:grid-cols-2 gap-6 sm:gap-[30px] items-start py-7 md:py-[50px] border-b-2 border-gray-200 border-solid">
+                                    <div class="text flex flex-col gap-3 xlg:gap-5 col-span-1">
+                                        <div class="date text-p text-black-100">
+                                            <p>16:00 - 17:30 Uhr</p>
+                                        </div>
+                                        <div class="data flex gap-4 flex-wrap">
+                                            <div class="tag bg-gray-200">Kategorie 1</div>
+                                        </div>
+                                        <h3 class="text-black-100 text-h5 sm:text-h4 lg:text-h3">
+                                            Fachpodium 7: <span class="font-normal">Auf die Plätze, fertig, los:
+                                                EU-Verordnung für entwaldungsfreie Lieferketten (EUDR) gemeinsam
+                                                erfolgreich umsetzen!</span>
+                                        </h3>
+                                        <div class="text">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                                eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                                                voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                                                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                                                amet.
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="pepole flex items-center *:w-[50px] *:h-[50px] *:rounded-[50%] *:ml-[-20px] ml-5 *:border-2 *:border-white *:border-solid">
+                                            <img src="./src/img/u-1.png" alt="user">
+                                            <img src="./src/img/u-2.png" alt="user">
+                                            <img src="./src/img/u-3.png" alt="user">
+                                            <img src="./src/img/u-4.png" alt="user">
+                                            <img src="./src/img/u-5.png" alt="user">
+                                            <img src="./src/img/u-6.png" alt="user">
+                                            <img src="./src/img/u-7.png" alt="user">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="video-section video col-span-1 text-center rounded-[20px] overflow-hidden leading-[0px]">
+                                        <div class="relative position-relative inline-block w-full h-full">
+                                            <video controls muted playsinline class="w-full h-full"
+                                                poster="./src/img/poster.png" height="400" width="600">
+                                                <source src="./src/video/trailer.mp4" type="video/mp4">
+                                            </video>
+                                            <span
+                                                class="absolute play-btn left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center cursor-pointer">
+                                                <div
+                                                    class="rounded-full flex items-center justify-center bg-gray-100 w-[70px] h-[70px]">
+                                                    <svg class="block" width="32" height="38" viewBox="0 0 32 38"
+                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M32 19L0 38L0 0L32 19Z" fill="white" />
+                                                    </svg>
+                                                </div>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="tab-box">
+                                <div
+                                    class="tab-date-text grid xlg:grid-cols-2 gap-6 sm:gap-[30px] items-start py-7 md:py-[50px] border-b-2 border-gray-200 border-solid">
+                                    <div class="text flex flex-col gap-3 xlg:gap-5 col-span-1">
+                                        <div class="date text-p text-black-100">
+                                            <p>16:00 - 17:30 Uhr</p>
+                                        </div>
+                                        <div class="data flex gap-4 flex-wrap">
+                                            <div class="tag bg-gray-200">Kategorie 1</div>
+                                        </div>
+                                        <h3 class="text-black-100 text-h5 sm:text-h4 lg:text-h3">
+                                            Fachpodium 2: <span class="font-normal">Ernährungsstandards in der
+                                                Schulverpflegung als Instrument zur Förderung des Rechts auf Nahrung in
+                                                Schulen</span>
+                                        </h3>
+                                        <div class="text">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                                eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                                                voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                                                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                                                amet.
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="pepole flex items-center *:w-[50px] *:h-[50px] *:rounded-[50%] *:ml-[-20px] ml-5 *:border-2 *:border-white *:border-solid">
+                                            <img src="./src/img/u-1.png" alt="user">
+                                            <img src="./src/img/u-2.png" alt="user">
+                                            <img src="./src/img/u-3.png" alt="user">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="video-section video col-span-1 text-center rounded-[20px] overflow-hidden leading-[0px]">
+                                        <div class="relative position-relative inline-block w-full h-full">
+                                            <video controls muted playsinline class="w-full h-full"
+                                                poster="./src/img/poster.png" height="400" width="600">
+                                                <source src="./src/video/trailer.mp4" type="video/mp4">
+                                            </video>
+                                            <span
+                                                class="absolute play-btn left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center cursor-pointer">
+                                                <div
+                                                    class="rounded-full flex items-center justify-center bg-gray-100 w-[70px] h-[70px]">
+                                                    <svg class="block" width="32" height="38" viewBox="0 0 32 38"
+                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M32 19L0 38L0 0L32 19Z" fill="white" />
+                                                    </svg>
+                                                </div>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab2" class="tab-content hidden">
+                        <div class="tab-contect space-y-6">
+                            <div class="tab-box">
+                                <div
+                                    class="tab-date-text grid xlg:grid-cols-2 gap-6 sm:gap-[30px] items-start py-7 md:py-[50px] border-b-2 border-gray-200 border-solid">
+                                    <div class="text flex flex-col gap-3 xlg:gap-5 col-span-1">
+                                        <div class="date text-p text-black-100">
+                                            <p>14:00 - 15:30 Uhr</p>
+                                        </div>
+                                        <h3 class="text-black-100 text-h5 sm:text-h4 lg:text-h3">
+                                            GFFA Eröffnung
+                                        </h3>
+                                        <div class="text">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                                eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                                                voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                                                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                                                amet.
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="pepole flex items-center *:w-[50px] *:h-[50px] *:rounded-[50%] *:ml-[-20px] ml-5 *:border-2 *:border-white *:border-solid">
+                                            <img src="./src/img/u-1.png" alt="user">
+                                            <img src="./src/img/u-2.png" alt="user">
+                                            <img src="./src/img/u-3.png" alt="user">
+                                            <img src="./src/img/u-4.png" alt="user">
+                                            <img src="./src/img/u-5.png" alt="user">
+                                            <img src="./src/img/u-6.png" alt="user">
+                                            <img src="./src/img/u-7.png" alt="user">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="video-section video col-span-1 text-center rounded-[20px] overflow-hidden leading-[0px]">
+                                        <div class="relative position-relative inline-block w-full h-full">
+                                            <video controls muted playsinline class="w-full h-full"
+                                                poster="./src/img/poster.png" height="400" width="600">
+                                                <source src="./src/video/trailer.mp4" type="video/mp4">
+                                            </video>
+                                            <span
+                                                class="absolute play-btn left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center cursor-pointer">
+                                                <div
+                                                    class="rounded-full flex items-center justify-center bg-gray-100 w-[70px] h-[70px]">
+                                                    <svg class="block" width="32" height="38" viewBox="0 0 32 38"
+                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M32 19L0 38L0 0L32 19Z" fill="white" />
+                                                    </svg>
+                                                </div>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="tab-box">
+                                <div
+                                    class="tab-date-text grid xlg:grid-cols-2 gap-6 sm:gap-[30px] items-start py-7 md:py-[50px] border-b-2 border-gray-200 border-solid">
+                                    <div class="text flex flex-col gap-3 xlg:gap-5 col-span-1">
+                                        <div class="date text-p text-black-100">
+                                            <p>16:00 - 17:30 Uhr</p>
+                                        </div>
+                                        <div class="data flex gap-4 flex-wrap">
+                                            <div class="tag bg-gray-200">Kategorie 1</div>
+                                        </div>
+                                        <h3 class="text-black-100 text-h5 sm:text-h4 lg:text-h3">
+                                            Fachpodium 7: <span class="font-normal">Auf die Plätze, fertig, los:
+                                                EU-Verordnung für entwaldungsfreie Lieferketten (EUDR) gemeinsam
+                                                erfolgreich umsetzen!</span>
+                                        </h3>
+                                        <div class="text">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                                eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                                                voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                                                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                                                amet.
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="pepole flex items-center *:w-[50px] *:h-[50px] *:rounded-[50%] *:ml-[-20px] ml-5 *:border-2 *:border-white *:border-solid">
+                                            <img src="./src/img/u-1.png" alt="user">
+                                            <img src="./src/img/u-2.png" alt="user">
+                                            <img src="./src/img/u-3.png" alt="user">
+                                            <img src="./src/img/u-4.png" alt="user">
+                                            <img src="./src/img/u-5.png" alt="user">
+                                            <img src="./src/img/u-6.png" alt="user">
+                                            <img src="./src/img/u-7.png" alt="user">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="video-section video col-span-1 text-center rounded-[20px] overflow-hidden leading-[0px]">
+                                        <div class="relative position-relative inline-block w-full h-full">
+                                            <video controls muted playsinline class="w-full h-full"
+                                                poster="./src/img/poster.png" height="400" width="600">
+                                                <source src="./src/video/trailer.mp4" type="video/mp4">
+                                            </video>
+                                            <span
+                                                class="absolute play-btn left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center cursor-pointer">
+                                                <div
+                                                    class="rounded-full flex items-center justify-center bg-gray-100 w-[70px] h-[70px]">
+                                                    <svg class="block" width="32" height="38" viewBox="0 0 32 38"
+                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M32 19L0 38L0 0L32 19Z" fill="white" />
+                                                    </svg>
+                                                </div>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab3" class="tab-content hidden">
+                        <div class="tab-contect space-y-6">
+                            <div class="tab-box">
+                                <div
+                                    class="tab-date-text grid xlg:grid-cols-2 gap-6 sm:gap-[30px] items-start py-7 md:py-[50px] border-b-2 border-gray-200 border-solid">
+                                    <div class="text flex flex-col gap-3 xlg:gap-5 col-span-1">
+                                        <div class="date text-p text-black-100">
+                                            <p>14:00 - 15:30 Uhr</p>
+                                        </div>
+                                        <h3 class="text-black-100 text-h5 sm:text-h4 lg:text-h3">
+                                            GFFA Eröffnung
+                                        </h3>
+                                        <div class="text">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                                eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                                                voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                                                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                                                amet.
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="pepole flex items-center *:w-[50px] *:h-[50px] *:rounded-[50%] *:ml-[-20px] ml-5 *:border-2 *:border-white *:border-solid">
+                                            <img src="./src/img/u-1.png" alt="user">
+                                            <img src="./src/img/u-2.png" alt="user">
+                                            <img src="./src/img/u-3.png" alt="user">
+                                            <img src="./src/img/u-4.png" alt="user">
+                                            <img src="./src/img/u-5.png" alt="user">
+                                            <img src="./src/img/u-6.png" alt="user">
+                                            <img src="./src/img/u-7.png" alt="user">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="video-section video col-span-1 text-center rounded-[20px] overflow-hidden leading-[0px]">
+                                        <div class="relative position-relative inline-block w-full h-full">
+                                            <video controls muted playsinline class="w-full h-full"
+                                                poster="./src/img/poster.png" height="400" width="600">
+                                                <source src="./src/video/trailer.mp4" type="video/mp4">
+                                            </video>
+                                            <span
+                                                class="absolute play-btn left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center cursor-pointer">
+                                                <div
+                                                    class="rounded-full flex items-center justify-center bg-gray-100 w-[70px] h-[70px]">
+                                                    <svg class="block" width="32" height="38" viewBox="0 0 32 38"
+                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M32 19L0 38L0 0L32 19Z" fill="white" />
+                                                    </svg>
+                                                </div>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab4" class="tab-content hidden">
+                        <div class="tab-contect space-y-6">
+                            <div class="tab-box">
+                                <div
+                                    class="tab-date-text grid xlg:grid-cols-2 gap-6 sm:gap-[30px] items-start py-7 md:py-[50px] border-b-2 border-gray-200 border-solid">
+                                    <div class="text flex flex-col gap-3 xlg:gap-5 col-span-1">
+                                        <div class="date text-p text-black-100">
+                                            <p>14:00 - 15:30 Uhr</p>
+                                        </div>
+                                        <h3 class="text-black-100 text-h5 sm:text-h4 lg:text-h3">
+                                            GFFA Eröffnung
+                                        </h3>
+                                        <div class="text">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                                eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                                                voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                                                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                                                amet.
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="pepole flex items-center *:w-[50px] *:h-[50px] *:rounded-[50%] *:ml-[-20px] ml-5 *:border-2 *:border-white *:border-solid">
+                                            <img src="./src/img/u-1.png" alt="user">
+                                            <img src="./src/img/u-2.png" alt="user">
+                                            <img src="./src/img/u-3.png" alt="user">
+                                            <img src="./src/img/u-4.png" alt="user">
+                                            <img src="./src/img/u-5.png" alt="user">
+                                            <img src="./src/img/u-6.png" alt="user">
+                                            <img src="./src/img/u-7.png" alt="user">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="video-section video col-span-1 text-center rounded-[20px] overflow-hidden leading-[0px]">
+                                        <div class="relative position-relative inline-block w-full h-full">
+                                            <video controls muted playsinline class="w-full h-full"
+                                                poster="./src/img/poster.png" height="400" width="600">
+                                                <source src="./src/video/trailer.mp4" type="video/mp4">
+                                            </video>
+                                            <span
+                                                class="absolute play-btn left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center cursor-pointer">
+                                                <div
+                                                    class="rounded-full flex items-center justify-center bg-gray-100 w-[70px] h-[70px]">
+                                                    <svg class="block" width="32" height="38" viewBox="0 0 32 38"
+                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M32 19L0 38L0 0L32 19Z" fill="white" />
+                                                    </svg>
+                                                </div>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="tab-box">
+                                <div
+                                    class="tab-date-text grid xlg:grid-cols-2 gap-6 sm:gap-[30px] items-start py-7 md:py-[50px] border-b-2 border-gray-200 border-solid">
+                                    <div class="text flex flex-col gap-3 xlg:gap-5 col-span-1">
+                                        <div class="date text-p text-black-100">
+                                            <p>16:00 - 17:30 Uhr</p>
+                                        </div>
+                                        <div class="data flex gap-4 flex-wrap">
+                                            <div class="tag bg-gray-200">Kategorie 1</div>
+                                        </div>
+                                        <h3 class="text-black-100 text-h5 sm:text-h4 lg:text-h3">
+                                            Fachpodium 7: <span class="font-normal">Auf die Plätze, fertig, los:
+                                                EU-Verordnung für entwaldungsfreie Lieferketten (EUDR) gemeinsam
+                                                erfolgreich umsetzen!</span>
+                                        </h3>
+                                        <div class="text">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                                                eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                                                voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                                                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                                                amet.
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="pepole flex items-center *:w-[50px] *:h-[50px] *:rounded-[50%] *:ml-[-20px] ml-5 *:border-2 *:border-white *:border-solid">
+                                            <img src="./src/img/u-1.png" alt="user">
+                                            <img src="./src/img/u-2.png" alt="user">
+                                            <img src="./src/img/u-3.png" alt="user">
+                                            <img src="./src/img/u-4.png" alt="user">
+                                            <img src="./src/img/u-5.png" alt="user">
+                                            <img src="./src/img/u-6.png" alt="user">
+                                            <img src="./src/img/u-7.png" alt="user">
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="video-section video col-span-1 text-center rounded-[20px] overflow-hidden leading-[0px]">
+                                        <div class="relative position-relative inline-block w-full h-full">
+                                            <video controls muted playsinline class="w-full h-full"
+                                                poster="./src/img/poster.png" height="400" width="600">
+                                                <source src="./src/video/trailer.mp4" type="video/mp4">
+                                            </video>
+                                            <span
+                                                class="absolute play-btn left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center cursor-pointer">
+                                                <div
+                                                    class="rounded-full flex items-center justify-center bg-gray-100 w-[70px] h-[70px]">
+                                                    <svg class="block" width="32" height="38" viewBox="0 0 32 38"
+                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M32 19L0 38L0 0L32 19Z" fill="white" />
+                                                    </svg>
+                                                </div>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!--  -->
+        <section class="form pb-12 sm:pb-16 md:pb-20 lg:pb-24">
+            <div class="container">
+                <div class="form-wrapper bg-green w-full sm:w-[90%] md:w-[80%] mx-auto rounded-[20px]">
+                    <div class="form-boxs grid md:grid-cols-2 gap-8 items-start p-4 sm:p-10">
+                        <div class="form-text col-span-1">
+                            <h2 class="text-sand text-h5 sm:text-h4 lg:text-h3 mb-2">Anmeldung Newsletter </h2>
+                            <div class="sub-text *:text-a *:sm:text-p *:text-sand">
+                                <p>Wenn Sie über das GFFA informiert werden und immer auf dem neuesten Stand bleiben
+                                    wollen, können Sie sich mit Hilfe des nebenstehenden Formulars für den GFFA
+                                    Newsletter anmelden.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form col-span-1">
+                            <form action="" class="flex flex-col gap-3 ">
+                                <input type="text" class="input " placeholder="Vor-und Nachname">
+                                <input type="email" class="input " placeholder="E-Mail-Adresse">
+                                <div class="check-box *:text-body *:text-sand flex gap-2 items-start py-3">
+                                    <input type="checkbox" name="" id="" class="w-[16px] h-[16px] flex-none">
+                                    <p> Hiermit bestätige ich die Datenschutzerklärung gelesen und verstanden zu haben.
+                                    </p>
+                                </div>
+                                <a href="#" class="btn w-auto hover:bg-black-100">Kostenlos anmelden</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="f-wrapper grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 mb-10 xsm:mb-16 sm:mb-20">
+                <div class="f-wd col-span-1">
+                    <div
+                        class="f-title *:text-p *:text-black-100 *:font-bold pb-3  border-b-2 border-white-100 border-solid">
+                        <p>Kontakt</p>
+                    </div>
+                    <div class="f-text *:text-black-100 *:text-body gap-y-7 flex flex-col mt-10">
+                        <p>Für alle Fragen wenden Sie sich bitte an:</p>
+                        <div class="contact space-y-3">
+                            <div class="contect-icon">
+                                <a class="flex gap-3 hover:text-green transition-all duration-300 ease-in-out items-center"
+                                    href="tel:+49030555740676"><svg class="flex-none" width="17" height="18"
+                                        viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.7188 9.625L15.2188 11.125C15.7812 11.3438 16.0938 11.9375 15.9688 12.5312L15.2188 16.0312C15.0938 16.5938 14.5625 17.0312 14 17.0312C13.7812 17.0312 13.5938 17 13.4062 17C13.0938 17 12.7812 16.9688 12.5 16.9375C5.46875 16.1875 0 10.25 0 3C0 2.4375 0.40625 1.90625 0.96875 1.78125L4.46875 1.03125C5.0625 0.90625 5.65625 1.21875 5.875 1.78125L7.375 5.28125C7.59375 5.78125 7.46875 6.375 7.03125 6.71875L5.75 7.78125C6.59375 9.21875 7.78125 10.4062 9.21875 11.25L10.2812 9.96875C10.625 9.53125 11.2188 9.40625 11.7188 9.625ZM13.7812 15.5L14.4375 12.4062L11.3125 11.0625L10.4062 12.1875C9.9375 12.75 9.125 12.9062 8.46875 12.5312C6.8125 11.5625 5.4375 10.1875 4.46875 8.53125C4.09375 7.875 4.25 7.0625 4.8125 6.59375L5.9375 5.6875L4.59375 2.5625L1.5 3.21875C1.59375 9.96875 7.03125 15.4062 13.7812 15.5Z"
+                                            fill="#1F8743" />
+                                    </svg>+49 (0) 30 555 740 676
+                                </a>
+                            </div>
+                            <div class="contect-icon">
+                                <a class="flex gap-3 hover:text-green transition-all duration-300 ease-in-out items-center"
+                                    href="mailto:info@gffa-berlin.de"><svg class="flex-none" width="16" height="12"
+                                        viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M2 1.5C1.71875 1.5 1.5 1.75 1.5 2V2.71875L6.875 7.125C7.53125 7.65625 8.4375 7.65625 9.09375 7.125L14.5 2.71875V2C14.5 1.75 14.25 1.5 14 1.5H2ZM1.5 4.65625V10C1.5 10.2812 1.71875 10.5 2 10.5H14C14.25 10.5 14.5 10.2812 14.5 10V4.65625L10.0625 8.28125C8.84375 9.28125 7.125 9.28125 5.9375 8.28125L1.5 4.65625ZM0 2C0 0.90625 0.875 0 2 0H14C15.0938 0 16 0.90625 16 2V10C16 11.125 15.0938 12 14 12H2C0.875 12 0 11.125 0 10V2Z"
+                                            fill="#1F8743" />
+                                    </svg>
+                                    info@gffa-berlin.de</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-wd col-span-1">
+                    <div
+                        class="f-title *:text-p *:text-black-100 *:font-bold pb-3  border-b-2 border-white-100 border-solid">
+                        <p>Veranstalter</p>
+                    </div>
+                    <div class="f-text *:text-black-100 *:text-body gap-7 grid grid-cols-1 xsm:grid-cols-2 mt-10">
+                        <a href="#" class="col-span-1">
+                            <img src="./src/img/bmel-f.png" alt="bmel-f">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="f-wd col-span-1">
+                    <div
+                        class="f-title *:text-p *:text-black-100 *:font-bold pb-3 border-b-2 border-white-100 border-solid">
+                        <p>In Kooperation mit</p>
+                    </div>
+                    <div
+                        class="f-text *:text-black-100 *:text-body gap-7 xsm:gap-5 grid  grid-cols-1 xsm:grid-cols-2 flex-wrap justify-between mt-10">
+                        <a href="#" class="col-span-1">
+                            <img src="./src/img/f-1.png" alt="f-1">
+                        </a>
+                        <a href="#" class="col-span-1">
+                            <img src="./src/img/f-2.png" alt="f-2">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right bg-green py-4">
+            <div class="container">
+                <div class="flex gap-4 items-center md:gap-0 flex-wrap flex-col-reverse md:flex-row">
+                    <div class="text w-full md:w-1/2 *:text-body text-sand text-center md:text-left">
+                        <p>© BUNDESMINISTERIUM FÜR ERNÄHRUNG UND LANDWIRTSCHAFT (BMEL)</p>
+                    </div>
+                    <div
+                        class="link w-full md:w-1/2 md:justify-end justify-center items-center gap-3 flex flex-wrap sm:gap-6 *:text-body text-sand">
+                        <a href="#">Impressum</a>
+                        <a href="#">Datenschutz</a>
+                        <a href="#">Kontakt</a>
+                        <a href="#">BMEL</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- main js -->
+    <script src="./src/js/script.js"></script>
+
+
+    <script>
+        jQuery(function ($) {
+            $(".position-relative video").removeAttr("controls");
+            $(".video-section").each(function () {
+                $(".play-btn").click(function () {
+                    var video = $(this)
+                        .closest(".position-relative")
+                        .find("video")
+                        .get(0);
+                    video.play();
+                    video.controls = true;
+                    $(this).css("visibility", "hidden");
+                    return false;
+                });
+
+                $(this)
+                    .find("video")
+                    .click(function () {
+                        var video = $(this).get(0);
+                        video.pause();
+                        video.controls = false;
+                        $(this)
+                            .siblings(".play-btn")
+                            .css("visibility", "visible");
+                        return false;
+                    });
+
+                $(this)
+                    .find("video")
+                    .on("ended", function () {
+                        $(this).get(0).controls = false;
+                        $(this)
+                            .siblings(".play-btn")
+                            .css("visibility", "visible");
+                        $(this)
+                            .get(0)
+                            .load();
+                    });
+            });
+        });
+    </script>
+</body>
+
+</html>
